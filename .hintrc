@@ -1,0 +1,36 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/html": [
+      "default",
+      {
+        "ignore": [
+          "video[playsinline]"
+        ]
+      }
+    ],
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "min-height: auto",
+          "backdrop-filter",
+          "-webkit-backdrop-filter",
+          "-webkit-text-size-adjust"
+        ]
+      }
+    ],
+    "disown-opener": "off",
+    "no-inline-styles": "off",
+    "axe/name-role-value": "off",
+    "css-prefix-order": "off"
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not ios_saf <= 26.1",
+    "not safari <= 26.2"
+  ]
+}
