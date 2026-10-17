@@ -26,7 +26,7 @@ Deno.serve(async (request) => {
   let submission: Submission;
   try {
     submission = await request.json();
-  } catch {
+  } catch { 
     return jsonResponse(400, { error: "Request body must be valid JSON." });
   }
 
