@@ -39,7 +39,7 @@ If the comments section reports a 404, the comments migration has not been appli
 ## Content still to add
 
 - Nominee cards use the ten video clips in `videos/Nominee1vid.mp4` through `videos/Nominee10vid.mp4`.
-- The six sponsor entries have been added with the supplied videos/images and WhatsApp/TikTok links.
+- The seven sponsor entries have been added with the supplied videos/images and WhatsApp/TikTok links.
 - Add the official awards TikTok profile URL to the prompt before the advertisements once it is available.
 - The final advertisement section currently includes Brightz Concept, Gerald, and Dominic Fabrics.
 

@@ -1,5 +1,6 @@
 import imageOne from "../images/Image1.jpg";
 import logo from "../images/logo.jpg";
+import newSponsorImage from "../images/NewSponsor1.png";
 import sponsor3Image from "../images/Sponsor3.jpg";
 import sponsor4Image from "../images/Sponsor4.jpg";
 import advert1Image from "../images/1stadvert.jpg";
@@ -134,6 +135,13 @@ type Sponsor = {
 };
 
 const sponsors: Sponsor[] = [
+  {
+    name: "SIRMONS",
+    media: newSponsorImage,
+    mediaType: "image",
+    linkLabel: "WhatsApp",
+    link: "https://wa.me/+2347061271122",
+  },
   {
     name: "Youngcity Collection",
     media: sponsor1Video,
