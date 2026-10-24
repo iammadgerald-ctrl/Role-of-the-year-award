@@ -111,6 +111,12 @@ button:disabled {
   text-transform: uppercase;
 }
 
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .home-link:hover {
   color: var(--gold);
 }
@@ -239,8 +245,14 @@ button:disabled {
   letter-spacing: 8px;
 }
 
+.welcome-actions {
+  display: grid;
+  width: min(100%, 360px);
+  gap: 12px;
+}
+
 .welcome-cta {
-  min-width: 290px;
+  width: 100%;
   justify-content: space-between;
 }
 
@@ -879,6 +891,10 @@ textarea::placeholder {
 
   .welcome-cta {
     min-width: 0;
+  }
+
+  .header-nav {
+    gap: 10px;
   }
 
   .welcome-art {

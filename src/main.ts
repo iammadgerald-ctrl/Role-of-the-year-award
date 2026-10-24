@@ -215,7 +215,10 @@ const header = () => `
       <img class="brand-logo" src="${logo}" alt="" />
       <span class="brand-name">Role of the Year<br /><strong>Awards 2026</strong></span>
     </a>
-    <a class="home-link" href="#welcome">Home</a>
+    <nav class="header-nav" aria-label="Main navigation">
+      <a class="home-link" href="#advertisements">Adverts</a>
+      <a class="home-link" href="#welcome">Home</a>
+    </nav>
   </header>
 `;
 
@@ -319,9 +322,14 @@ app.innerHTML = `
             <p class="eyebrow">A celebration of excellence</p>
             <h1 id="welcome-title">Welcome to the<br /><span>Role of the Year</span><br />Award</h1>
             <p class="welcome-year">2026</p>
-            <a class="button button-gold welcome-cta" href="#main-event">
-              Check out our nominees <span aria-hidden="true">↗</span>
-            </a>
+            <div class="welcome-actions">
+              <a class="button button-gold welcome-cta" href="#main-event">
+                Check out our nominees <span aria-hidden="true">↗</span>
+              </a>
+              <a class="button button-outline welcome-cta" href="#advertisements">
+                Explore advertisements <span aria-hidden="true">→</span>
+              </a>
+            </div>
           </div>
           <div class="welcome-art">
             <img src="${imageOne}" alt="Role of the Year Awards 2026" />
@@ -738,14 +746,14 @@ document
   });
 
 history.scrollRestoration = "manual";
-if (window.location.hash) {
-  history.replaceState(
-    null,
-    "",
-    `${window.location.pathname}${window.location.search}`,
-  );
+const initialSection = document.getElementById(window.location.hash.slice(1));
+if (initialSection) {
+  window.requestAnimationFrame(() => {
+    initialSection.scrollIntoView({ block: "start" });
+  });
+} else {
+  window.scrollTo(0, 0);
 }
-window.scrollTo(0, 0);
 
 void loadVoteResults();
 void loadPublicComments();
