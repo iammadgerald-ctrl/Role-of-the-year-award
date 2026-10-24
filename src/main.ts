@@ -6,6 +6,7 @@ import sponsor4Image from "../images/Sponsor4.jpg";
 import advert1Image from "../images/1stadvert.jpg";
 import advert2Image from "../images/2ndadvert.png";
 import newAdvert1Image from "../images/Newadvert1.jpg";
+import hypeMcIchieImage from "../images/HypeMc-Ichie-Talkative.png";
 import advert6Video from "../videos/6thadvert.mp4";
 import sponsor1Video from "../videos/Sponsor1.mp4";
 import sponsor2Video from "../videos/Sponsor2.mp4";
@@ -55,6 +56,19 @@ type Advert = {
 };
 
 const adverts: Advert[] = [
+  {
+    title: "Hype MC Ichie Talkative (VDM ABA)",
+    subtitle:
+      "MC • Hype Man • Stand-up Comedian • Nollywood Actor • TV/Radio Presenter • Advertiser • Activist",
+    media: hypeMcIchieImage,
+    mediaType: "image",
+    points: [
+      "We are ready to serve you better in all kinds of entertainment at an affordable rate.",
+    ],
+    links: [
+      { label: "WhatsApp Bookings", href: "https://wa.me/+2348132994942" },
+    ],
+  },
   {
     title: "Pandaz Visualz",
     subtitle: "Clean, cinematic, and professional videos",
