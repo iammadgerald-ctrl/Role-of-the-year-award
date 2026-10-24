@@ -297,7 +297,7 @@ button:disabled {
 
 .sponsors-page,
 .event-page,
-.adverts-page {
+.promotions-page {
   background:
     radial-gradient(ellipse at 50% 12%, rgba(93, 76, 58, 0.17), transparent 45%);
 }
@@ -661,16 +661,16 @@ textarea::placeholder {
   transition: width 300ms ease;
 }
 
-.adverts-intro {
+.promotions-intro {
   padding-bottom: 20px;
 }
 
-.advert-list {
+.promotion-list {
   display: grid;
   gap: 22px;
 }
 
-.advert-card {
+.promotion-card {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
   gap: 28px;
@@ -680,15 +680,15 @@ textarea::placeholder {
   background: rgba(20, 15, 10, 0.44);
 }
 
-.advert-media {
+.promotion-media {
   display: grid;
   overflow: hidden;
   border: 1px solid rgba(212, 185, 150, 0.35);
   background: #050505;
 }
 
-.advert-image,
-.advert-video {
+.promotion-image,
+.promotion-video {
   display: block;
   width: 100%;
   max-height: 520px;
@@ -696,12 +696,12 @@ textarea::placeholder {
   background: #050505;
 }
 
-.advert-copy {
+.promotion-copy {
   display: grid;
   gap: 12px;
 }
 
-.advert-copy h2 {
+.promotion-copy h2 {
   margin: 0;
   color: var(--paper);
   font-family: "Playfair Display", Georgia, serif;
@@ -710,7 +710,7 @@ textarea::placeholder {
   line-height: 1.08;
 }
 
-.advert-subtitle {
+.promotion-subtitle {
   margin: 0;
   color: var(--gold);
   font-size: 14px;
@@ -718,7 +718,7 @@ textarea::placeholder {
   line-height: 1.6;
 }
 
-.advert-points {
+.promotion-points {
   display: grid;
   gap: 8px;
   margin: 0;
@@ -728,14 +728,14 @@ textarea::placeholder {
   line-height: 1.7;
 }
 
-.advert-links {
+.promotion-links {
   display: flex;
   flex-wrap: wrap;
   gap: 9px;
   margin-top: 5px;
 }
 
-.advert-links a {
+.promotion-links a {
   display: inline-flex;
   min-height: 40px;
   align-items: center;
@@ -747,7 +747,7 @@ textarea::placeholder {
   text-decoration: none;
 }
 
-.advert-links a:hover {
+.promotion-links a:hover {
   border-color: var(--gold);
   background: rgba(212, 185, 150, 0.1);
 }
@@ -848,13 +848,13 @@ textarea::placeholder {
     grid-template-columns: 1fr;
   }
 
-  .advert-card {
+  .promotion-card {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  .advert-image,
-  .advert-video {
+  .promotion-image,
+  .promotion-video {
     max-height: 50svh;
   }
 }
@@ -959,11 +959,11 @@ textarea::placeholder {
     width: 100%;
   }
 
-  .advert-card {
+  .promotion-card {
     padding: 14px;
   }
 
-  .advert-links a {
+  .promotion-links a {
     flex: 1 1 120px;
   }
 

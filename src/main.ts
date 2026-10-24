@@ -283,22 +283,22 @@ const sponsorCards = sponsors
 const advertCards = adverts
   .map(
     (advert, index) => `
-      <article class="advert-card">
-        <div class="advert-media">
+      <article class="promotion-card">
+        <div class="promotion-media">
           ${
             advert.mediaType === "video"
-              ? `<video class="advert-video" src="${advert.media}" controls playsinline preload="metadata"></video>`
-              : `<img class="advert-image" src="${advert.media}" alt="${advert.title}" />`
+              ? `<video class="promotion-video" src="${advert.media}" controls playsinline preload="metadata"></video>`
+              : `<img class="promotion-image" src="${advert.media}" alt="${advert.title}" />`
           }
         </div>
-        <div class="advert-copy">
+        <div class="promotion-copy">
           <p class="eyebrow">Advert ${String(index + 1).padStart(2, "0")}</p>
           <h2>${advert.title}</h2>
-          <p class="advert-subtitle">${advert.subtitle}</p>
-          <ul class="advert-points">${advert.points.map((point) => `<li>${point}</li>`).join("")}</ul>
+          <p class="promotion-subtitle">${advert.subtitle}</p>
+          <ul class="promotion-points">${advert.points.map((point) => `<li>${point}</li>`).join("")}</ul>
           ${
             advert.links.length
-              ? `<div class="advert-links">${advert.links
+              ? `<div class="promotion-links">${advert.links
                   .map(
                     (link) =>
                       `<a href="${link.href}" target="_blank" rel="noreferrer noopener">${link.label}</a>`,
@@ -399,14 +399,14 @@ app.innerHTML = `
       </div>
     </section>
 
-    <section class="page adverts-page" id="advertisements" aria-labelledby="adverts-title">
+    <section class="page promotions-page" id="advertisements" aria-labelledby="adverts-title">
       <div class="page-shell">
         ${header()}
-        <div class="section-intro adverts-intro">
+        <div class="section-intro promotions-intro">
           <p class="eyebrow">Our partners</p>
           <h1 id="adverts-title">Advertisement Page</h1>
         </div>
-        <div class="advert-list">${advertCards}</div>
+        <div class="promotion-list">${advertCards}</div>
         <div class="page-end-cta">
           <p class="eyebrow">Thank you for celebrating with us</p>
           <a class="button button-gold" href="#welcome">Back to homepage <span aria-hidden="true">↑</span></a>
