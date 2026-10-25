@@ -22,3 +22,4 @@ for each row
 execute function public.reject_enioluwa_votes();
 
 revoke all on function public.reject_enioluwa_votes() from public, anon, authenticated;
+grant execute on function public.reject_enioluwa_votes() to service_role;
