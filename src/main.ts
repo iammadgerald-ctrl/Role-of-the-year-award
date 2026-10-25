@@ -31,6 +31,7 @@ type Nominee = {
   id: number;
   name: string;
   video: string;
+  eliminated?: boolean;
 };
 
 const nominees: Nominee[] = [
@@ -40,7 +41,7 @@ const nominees: Nominee[] = [
   { id: 4, name: "Emmanuel Peace Kelechi", video: nominee4Video },
   { id: 5, name: "Precious Chinaza Onyema", video: nominee5Video },
   { id: 6, name: "Emmanuel Michael Chigozirim", video: nominee6Video },
-  { id: 7, name: "Enioluwa", video: nominee7Video },
+  { id: 7, name: "Enioluwa", video: nominee7Video, eliminated: true },
   { id: 8, name: "Amaku Michael", video: nominee8Video },
   { id: 9, name: "Elijah Godswill", video: nominee9Video },
   { id: 10, name: "Joseph", video: nominee10Video },
@@ -247,9 +248,10 @@ const nomineeCards = nominees
           <div>
             <p class="eyebrow">Nominee ${String(nominee.id).padStart(2, "0")}</p>
             <h2>${nominee.name}</h2>
+            ${nominee.eliminated ? '<p class="nominee-eliminated">Eliminated · Voting closed</p>' : ""}
           </div>
-          <button class="button button-outline vote-button" type="button" data-nominee-id="${nominee.id}">
-            Vote for ${nominee.name}
+          <button class="button button-outline vote-button${nominee.eliminated ? " is-eliminated" : ""}" type="button" data-nominee-id="${nominee.id}" ${nominee.eliminated ? `disabled aria-label="${nominee.name} has been eliminated. Voting is closed."` : ""}>
+            ${nominee.eliminated ? "Voting closed" : `Vote for ${nominee.name}`}
           </button>
         </div>
       </article>
@@ -477,7 +479,7 @@ document.querySelectorAll<HTMLButtonElement>("[data-close-modal]").forEach((butt
   button.addEventListener("click", () => closeModal(button.closest("dialog")));
 });
 
-document.querySelectorAll<HTMLButtonElement>(".vote-button").forEach((button) => {
+document.querySelectorAll<HTMLButtonElement>(".vote-button:not(:disabled)").forEach((button) => {
   button.addEventListener("click", () => {
     selectedNominee = nominees.find(
       (nominee) => nominee.id === Number(button.dataset.nomineeId),
@@ -688,7 +690,7 @@ const renderVoteResults = (
       const percentage = Math.max(0, Math.min(100, total?.percentage ?? 0));
       return `
         <li class="result-row">
-          <div class="result-label"><span>${nominee.name}</span><strong>${percentage.toFixed(1)}%</strong></div>
+          <div class="result-label"><span>${nominee.name}${nominee.eliminated ? " · Eliminated" : ""}</span><strong>${percentage.toFixed(1)}%</strong></div>
           <div class="result-track" aria-label="${percentage.toFixed(1)} percent">
             <span style="width: ${percentage}%"></span>
           </div>

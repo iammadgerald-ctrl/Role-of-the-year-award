@@ -46,6 +46,12 @@ Deno.serve(async (request) => {
   let subject: string;
   let text: string;
 
+  if (submission?.type === "vote" && submission.nomineeId === 7) {
+    return jsonResponse(410, {
+      error: "Enioluwa has been eliminated. Voting for this nominee is closed.",
+    });
+  }
+
   if (
     submission?.type === "vote" &&
     typeof submission.email === "string" &&
