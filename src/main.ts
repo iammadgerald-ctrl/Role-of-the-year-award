@@ -36,7 +36,7 @@ type Nominee = {
 
 const nominees: Nominee[] = [
   { id: 1, name: "David Nwokolo", video: nominee1Video },
-  { id: 2, name: "Treasure Amarachi", video: nominee2Video },
+  { id: 2, name: "Treasure Amarachi", video: nominee2Video, eliminated: true },
   { id: 3, name: "Prince Chibueze Onyekachi", video: nominee3Video },
   { id: 4, name: "Emmanuel Peace Kelechi", video: nominee4Video },
   { id: 5, name: "Precious Chinaza Onyema", video: nominee5Video },
