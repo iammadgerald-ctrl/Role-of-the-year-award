@@ -341,6 +341,31 @@ button:disabled {
   background: rgba(20, 15, 10, 0.55);
 }
 
+.nominee-card.is-eliminated {
+  border-color: rgba(218, 92, 77, 0.8);
+  box-shadow: 0 0 0 1px rgba(218, 92, 77, 0.18);
+}
+
+.nominee-video-frame {
+  position: relative;
+}
+
+.nominee-status-badge {
+  position: absolute;
+  z-index: 1;
+  top: 16px;
+  left: 16px;
+  padding: 9px 12px;
+  border: 1px solid rgba(255, 177, 166, 0.75);
+  background: rgba(112, 35, 29, 0.94);
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.55);
+  color: #fff0ed;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  pointer-events: none;
+}
+
 .sponsor-media {
   display: grid;
   min-height: 230px;
@@ -511,11 +536,15 @@ button:disabled {
 }
 
 .nominee-eliminated {
-  margin: 8px 0 0;
-  color: var(--muted-gold);
+  width: fit-content;
+  margin: 10px 0 0;
+  padding: 7px 9px;
+  border-left: 3px solid #da5c4d;
+  background: rgba(112, 35, 29, 0.28);
+  color: #ffb1a6;
   font-size: 10px;
   font-weight: 700;
-  letter-spacing: 1.2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 

@@ -233,8 +233,9 @@ const footer = () => `
 const nomineeCards = nominees
   .map(
     (nominee) => `
-      <article class="nominee-card">
+      <article class="nominee-card${nominee.eliminated ? " is-eliminated" : ""}">
         <div class="nominee-video-frame">
+          ${nominee.eliminated ? '<span class="nominee-status-badge" aria-hidden="true">ELIMINATED</span>' : ""}
           <video
             class="nominee-video"
             src="${nominee.video}"
