@@ -46,8 +46,14 @@ Deno.serve(async (request) => {
   let subject: string;
   let text: string;
 
-  if (submission?.type === "vote" && [2, 7].includes(submission.nomineeId)) {
-    const nomineeName = submission.nomineeId === 2 ? "Treasure Amarachi" : "Enioluwa";
+  if (submission?.type === "vote" && [1, 2, 6, 7].includes(submission.nomineeId)) {
+    const eliminatedNomineeNames: Record<number, string> = {
+      1: "David Nwokolo",
+      2: "Treasure Amarachi",
+      6: "Emmanuel Michael Chigozirim",
+      7: "Enioluwa",
+    };
+    const nomineeName = eliminatedNomineeNames[submission.nomineeId];
     return jsonResponse(410, {
       error: `${nomineeName} has been eliminated. Voting for this nominee is closed.`,
     });

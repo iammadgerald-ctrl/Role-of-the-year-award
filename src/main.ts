@@ -35,12 +35,12 @@ type Nominee = {
 };
 
 const nominees: Nominee[] = [
-  { id: 1, name: "David Nwokolo", video: nominee1Video },
+  { id: 1, name: "David Nwokolo", video: nominee1Video, eliminated: true },
   { id: 2, name: "Treasure Amarachi", video: nominee2Video, eliminated: true },
   { id: 3, name: "Prince Chibueze Onyekachi", video: nominee3Video },
   { id: 4, name: "Emmanuel Peace Kelechi", video: nominee4Video },
   { id: 5, name: "Precious Chinaza Onyema", video: nominee5Video },
-  { id: 6, name: "Emmanuel Michael Chigozirim", video: nominee6Video },
+  { id: 6, name: "Emmanuel Michael Chigozirim", video: nominee6Video, eliminated: true },
   { id: 7, name: "Enioluwa", video: nominee7Video, eliminated: true },
   { id: 8, name: "Amaku Michael", video: nominee8Video },
   { id: 9, name: "Elijah Godswill", video: nominee9Video },
